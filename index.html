@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Aurora Boutique Hotel</title>
+  <meta name="description" content="Aurora Boutique Hotel – luxury stays, lakeside views, bespoke experiences." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css" />
+  <link rel="manifest" href="/manifest.webmanifest">
+  <meta name="theme-color" content="#0b1221" />
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
+    }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">Aurora</a>
+      <nav class="nav">
+        <a href="#rooms">Rooms</a>
+        <a href="#dining">Dining</a>
+        <a href="#spa">Spa</a>
+        <a href="#experiences">Experiences</a>
+        <a href="#contact">Contact</a>
+        <a href="#book" class="btn btn-primary">Book now</a>
+      </nav>
+      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1 class="display">Where lake meets sky</h1>
+        <p class="subtitle">A serene boutique retreat with elevated comforts and a whisper-quiet spa.</p>
+        <div class="cta-row">
+          <a href="#rooms" class="btn btn-light">Explore rooms</a>
+          <a href="#book" class="btn btn-primary">Check availability</a>
+        </div>
+      </div>
+      <div class="hero-scenery" role="img" aria-label="Lakeside view at dusk"></div>
+    </section>
+
+    <section id="rooms" class="section rooms">
+      <div class="container">
+        <h2>Rooms & Suites</h2>
+        <p class="section-lead">Thoughtfully designed sanctuaries with lake-facing balconies, rain showers, and organic linens.</p>
+        <div class="cards">
+          <article class="card">
+            <img src="/assets/images/room-deluxe.svg" alt="Deluxe King room with lake view" />
+            <div class="card-body">
+              <h3>Deluxe King</h3>
+              <p>King bed, balcony, partial lake view.</p>
+              <div class="price">From $220/night</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="/assets/images/room-lakeside.svg" alt="Lakeside Suite with panoramic windows" />
+            <div class="card-body">
+              <h3>Lakeside Suite</h3>
+              <p>Separate lounge, full lake panorama.</p>
+              <div class="price">From $360/night</div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="/assets/images/room-loft.svg" alt="Loft suite with skylight" />
+            <div class="card-body">
+              <h3>Sky Loft</h3>
+              <p>Skylight bathtub, private terrace.</p>
+              <div class="price">From $480/night</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="dining" class="section dining">
+      <div class="container two-col">
+        <div>
+          <h2>Dining</h2>
+          <p>Seasonal tasting menus by Chef Rivera. Vegetables from our rooftop garden, lake fish, wood-fired breads.</p>
+          <ul class="bullets">
+            <li>Breakfast 7–11am, Dinner 6–10pm</li>
+            <li>Plant-forward tasting menu available</li>
+            <li>Cellar of 300+ natural wines</li>
+          </ul>
+        </div>
+        <div class="image"></div>
+      </div>
+    </section>
+
+    <section id="spa" class="section spa">
+      <div class="container two-col">
+        <div class="image"></div>
+        <div>
+          <h2>Spa</h2>
+          <p>Thermal suite with saunas and aromatherapy steam. Treatments with alpine botanicals and sound therapy.</p>
+          <ul class="bullets">
+            <li>Open 9am–9pm daily</li>
+            <li>Private hydrotherapy for couples</li>
+            <li>Cold plunge and stargazing deck</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="experiences" class="section experiences">
+      <div class="container">
+        <h2>Experiences</h2>
+        <div class="chips">
+          <span class="chip">Sunrise paddle</span>
+          <span class="chip">Foraging walk</span>
+          <span class="chip">Wine tastings</span>
+          <span class="chip">Stargazing</span>
+          <span class="chip">Forest bathing</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="book" class="section book">
+      <div class="container">
+        <h2>Book your stay</h2>
+        <form id="booking-form" class="booking-form" autocomplete="off">
+          <label>
+            <span>Check-in</span>
+            <input type="date" id="checkin" required>
+          </label>
+          <label>
+            <span>Check-out</span>
+            <input type="date" id="checkout" required>
+          </label>
+          <label>
+            <span>Guests</span>
+            <input type="number" id="guests" min="1" value="2" required>
+          </label>
+          <label>
+            <span>Room type</span>
+            <select id="room-type">
+              <option>Deluxe King</option>
+              <option>Lakeside Suite</option>
+              <option>Sky Loft</option>
+            </select>
+          </label>
+          <button type="submit" class="btn btn-primary">Check availability</button>
+        </form>
+        <div id="booking-result" class="booking-result" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <div class="container two-col">
+        <div>
+          <h2>Contact</h2>
+          <p>Email concierge@aurorahotel.example or call +1 (555) 284-9301</p>
+          <p>122 Lakecrest Way, Alpine Shores</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram" class="social">IG</a>
+            <a href="#" aria-label="Facebook" class="social">FB</a>
+            <a href="#" aria-label="TikTok" class="social">TT</a>
+          </div>
+        </div>
+        <iframe title="Map to Aurora Boutique Hotel" class="map" srcdoc="<!doctype html><html><body style='margin:0'><div style='display:flex;align-items:center;justify-content:center;height:100vh;font-family:Arial,sans-serif;color:#123'>Map placeholder</div></body></html>"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© <span id="year"></span> Aurora Boutique Hotel</div>
+      <div class="fineprint">
+        <a href="#" class="link">Privacy</a>
+        <a href="#" class="link">Terms</a>
+        <a href="#" class="link">Accessibility</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="chat-toggle" class="chat-toggle" aria-label="Open concierge chat"></button>
+  <div id="chat-panel" class="chat-panel" aria-live="polite" aria-expanded="false"></div>
+
+  <script type="module" src="/assets/js/main.js"></script>
+</body>
+</html>
