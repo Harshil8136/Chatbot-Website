@@ -1,190 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Aurora Boutique Hotel</title>
-  <meta name="description" content="Aurora Boutique Hotel – luxury stays, lakeside views, bespoke experiences." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css" />
-  <link rel="manifest" href="/manifest.webmanifest">
-  <meta name="theme-color" content="#0b1221" />
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
-    }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Grand Pet Hotel | Luxury Boarding</title>
+    
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components/header.css">
+    <link rel="stylesheet" href="css/components/forms.css">
+    <link rel="stylesheet" href="css/components/chatbot.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#home" class="brand">Aurora</a>
-      <nav class="nav">
-        <a href="#rooms">Rooms</a>
-        <a href="#dining">Dining</a>
-        <a href="#spa">Spa</a>
-        <a href="#experiences">Experiences</a>
-        <a href="#contact">Contact</a>
-        <a href="#book" class="btn btn-primary">Book now</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+
+    <header class="main-header">
+        <nav class="navbar">
+            <div class="navbar-logo">
+                <a href="#">The Grand Pet Hotel</a>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#suites">Suites</a></li>
+                <li><a href="#features">Why Choose Us</a></li>
+                <li><a href="#book">Book Now</a></li>
+            </ul>
+            <div class="nav-controls">
+                <div class="theme-switcher">
+                    <button id="themeToggleBtn">Toggle Theme</button>
+                </div>
+                <button class="nav-toggle-btn" id="navToggleBtn" aria-label="Toggle navigation menu">
+                    &#9776; </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1 class="reveal-on-scroll">Your Pet's Luxury Getaway</h1>
+                <p class="reveal-on-scroll reveal-delay-1">Experience five-star service and unparalleled care at The Grand Pet Hotel.</p>
+                <a href="#book" class="btn btn-primary reveal-on-scroll reveal-delay-2">Book Their Stay</a>
+            </div>
+        </section>
+
+        <section class="page-section" id="services">
+            <h2 class="section-heading reveal-on-scroll">Our Services</h2>
+            <div class="room-container">
+                <div class="room-card reveal-on-scroll">
+                    <img src="assets/images/service-boarding.jpg" alt="Luxury Pet Boarding">
+                    <h3>Luxury Boarding</h3>
+                    <p>Premium overnight care in our world-class suites with 24/7 staff.</p>
+                </div>
+                <div class="room-card reveal-on-scroll reveal-delay-1">
+                    <img src="assets/images/service-daycare.jpg" alt="Doggie Daycare">
+                    <h3>Doggie Daycare</h3>
+                    <p>Supervised all-day group play in our climate-controlled indoor parks.</p>
+                </div>
+                <div class="room-card reveal-on-scroll reveal-delay-2">
+                    <img src="assets/images/service-spa.jpg" alt="Pet Spa & Grooming">
+                    <h3>Pet Spa & Grooming</h3>
+                    <p>Full-service spa offering baths, professional grooming, and "paw-dicures."</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-light" id="suites">
+            <h2 class="section-heading reveal-on-scroll">Our Suites</h2>
+            <div class="room-container">
+                <div class="room-card reveal-on-scroll">
+                    <img src="assets/images/room-1.jpg" alt="Deluxe Den">
+                    <h3>Deluxe Den</h3>
+                    <p>A spacious, cozy den with premium bedding and soothing music.</p>
+                </div>
+                <div class="room-card reveal-on-scroll reveal-delay-1">
+                    <img src="assets/images/room-2.jpg" alt="Luxury Suite">
+                    <h3>Luxury Suite</h3>
+                    <p>Private suite with tempered glass, raised bed, and separate play area.</p>
+                </div>
+                <div class="room-card reveal-on-scroll reveal-delay-2">
+                    <img src="assets/images/room-3.jpg" alt="Presidential Pet Suite">
+                    <h3>The Presidential Suite</h3>
+                    <p>The pinnacle of luxury. Full-room suite with 24/7 private pet cam.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section" id="features">
+            <h2 class="section-heading reveal-on-scroll">Why Choose Us?</h2>
+            <div class="amenities-grid">
+                <div class="amenity-item reveal-on-scroll">
+                    <img src="assets/icons/staff.svg" alt="24/7 Staff Icon" class="amenity-icon">
+                    <h4>24/7 On-Site Staff</h4>
+                    <p>Trained, certified pet-care professionals are always on duty.</p>
+                </div>
+                <div class="amenity-item reveal-on-scroll reveal-delay-1">
+                    <img src="assets/icons/play-park.svg" alt="Play Park Icon" class="amenity-icon">
+                    <h4>Indoor Play Parks</h4>
+                    <p>Climate-controlled, supervised play areas with safe equipment.</p>
+                </div>
+                <div class="amenity-item reveal-on-scroll reveal-delay-2">
+                    <img src="assets/icons/vet.svg" alt="Vet Icon" class="amenity-icon">
+                    <h4>Veterinarian Recommended</h4>
+                    <p>Our cleaning protocols and safety standards are top-tier.</p>
+                </div>
+                <div class="amenity-item reveal-on-scroll reveal-delay-3">
+                    <img src="assets/icons/treat.svg" alt="Treat Icon" class="amenity-icon">
+                    <h4>Gourmet Pet Menu</h4>
+                    <p>In-room dining with chef-prepared meals and healthy treats.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-light" id="pet-cams">
+            <h2 class="section-heading reveal-on-scroll">Live Pet Cams</h2>
+            <div id="pet-cam-container" class="reveal-on-scroll" style="text-align: center;">
+                </div>
+        </section>
+
+        <section class="page-section" id="book">
+            <h2 class="section-heading reveal-on-scroll">Manage Pets & Bookings</h2>
+            
+            <div class="booking-area-container">
+                
+                <div class="pet-management-container">
+                    
+                    <div class="booking-form-container reveal-on-scroll">
+                        <h3>Add a New Pet Profile</h3>
+                        <form id="newPetProfileForm" class="booking-form">
+                            <div class="form-group">
+                                <label for="ownerName">Your Full Name:</label>
+                                <input type="text" id="ownerName" name="ownerName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="petName">Pet's Name:</label>
+                                <input type="text" id="petName" name="petName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="breed">Breed:</label>
+                                <input type="text" id="breed" name="breed">
+                            </div>
+                            <div class="form-group">
+                                <label for="vetInfo">Veterinarian Info (Name & Phone):</label>
+                                <input type="text" id="vetInfo" name="vetInfo" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="feedingNotes">Feeding Notes (e.g., "1 cup, 2x daily"):</label>
+                                <textarea id="feedingNotes" name="feedingNotes" rows="2"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-full">Save Pet Profile</button>
+                        </form>
+                    </div>
+
+                    <div class="booking-form-container reveal-on-scroll" style="margin-top: 2rem;">
+                        <h3>Book a Stay</h3>
+                        <form id="directBookingForm" class="booking-form">
+                            <div class="form-group">
+                                <label for="pet-select">Select Pet:</label>
+                                <select id="pet-select" name="pet-select" required>
+                                    <option value="">-- Please add a pet profile first --</option>
+                                    </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="checkin">Check-in Date:</label>
+                                <input type="date" id="checkin" name="checkin" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="nights">Number of Nights:</label>
+                                <input type="number" id="nights" name="nights" min="1" value="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="room-type">Suite Type:</label>
+                                <select id="room-type" name="room-type">
+                                    <option value="Deluxe Den">Deluxe Den</option>
+                                    <option value="Luxury Suite">Luxury Suite</option>
+                                    <option value="Presidential Pet Suite">Presidential Pet Suite</option>
+                                </select>
+                            </div>
+                            <fieldset class="form-group">
+                                <legend>A La Carte Add-ons:</legend>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="addon-treat" name="addons" value="Gourmet Treat">
+                                    <label for="addon-treat">Gourmet Treat ($10)</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="addon-cuddle" name="addons" value="Extra Cuddle Time">
+                                    <label for="addon-cuddle">Extra Cuddle Time ($15)</label>
+                                </div>
+                                <div class="checkbox-group">
+                                    <input type="checkbox" id="addon-spa" name="addons" value="Spa Bath">
+                                    <label for="addon-spa">Spa Bath ($40)</label>
+                                </div>
+                            </fieldset>
+                            <button type="submit" class="btn btn-primary btn-full">Book Stay</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="booking-display-container">
+                    
+                    <div class="my-bookings-container reveal-on-scroll reveal-delay-1">
+                        <h3>My Pets</h3>
+                        <p>Pets you add are saved in your browser.</p>
+                        <div id="petList">
+                            </div>
+                    </div>
+                    
+                    <div classs="my-bookings-container reveal-on-scroll reveal-delay-1" style="margin-top: 2rem;">
+                        <h3>My Bookings</h3>
+                        <p>Bookings you make are saved in your browser.</p>
+                        <div id="bookingList">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div class="chatbot-container closed" id="chatbotContainer">
+        <div class="chatbot-header" id="chatbotHeader">
+            <span>Pet Concierge</span>
+            
+            <div class="chatbot-toggle-icon" id="chatbotToggleIcon">
+                <span class="icon-bar horizontal"></span>
+                <span class="icon-bar vertical"></span>
+            </div>
+            
+        </div>
+        
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-messages" id="chatbotMessages">
+                </div>
+            
+            <div class="chatbot-quick-replies" id="chatbotQuickReplies">
+                </div>
+
+            <form class="chatbot-input-form" id="chatbotForm">
+                <input type="text" id="chatbotInput" placeholder="Type your message..." autocomplete="off">
+                <button type="submit" aria-label="Send Message">
+                    &#10148; </button>
+            </form>
+        </div>
     </div>
-  </header>
+    
+    <footer class="main-footer">
+        <p>&copy; 2025 The Grand Pet Hotel. All rights reserved.</p>
+    </footer>
 
-  <main id="home">
-    <section class="hero">
-      <div class="container hero-inner">
-        <h1 class="display">Where lake meets sky</h1>
-        <p class="subtitle">A serene boutique retreat with elevated comforts and a whisper-quiet spa.</p>
-        <div class="cta-row">
-          <a href="#rooms" class="btn btn-light">Explore rooms</a>
-          <a href="#book" class="btn btn-primary">Check availability</a>
-        </div>
-      </div>
-      <div class="hero-scenery" role="img" aria-label="Lakeside view at dusk"></div>
-    </section>
-
-    <section id="rooms" class="section rooms">
-      <div class="container">
-        <h2>Rooms & Suites</h2>
-        <p class="section-lead">Thoughtfully designed sanctuaries with lake-facing balconies, rain showers, and organic linens.</p>
-        <div class="cards">
-          <article class="card">
-            <img src="/assets/images/room-deluxe.svg" alt="Deluxe King room with lake view" />
-            <div class="card-body">
-              <h3>Deluxe King</h3>
-              <p>King bed, balcony, partial lake view.</p>
-              <div class="price">From $220/night</div>
-            </div>
-          </article>
-          <article class="card">
-            <img src="/assets/images/room-lakeside.svg" alt="Lakeside Suite with panoramic windows" />
-            <div class="card-body">
-              <h3>Lakeside Suite</h3>
-              <p>Separate lounge, full lake panorama.</p>
-              <div class="price">From $360/night</div>
-            </div>
-          </article>
-          <article class="card">
-            <img src="/assets/images/room-loft.svg" alt="Loft suite with skylight" />
-            <div class="card-body">
-              <h3>Sky Loft</h3>
-              <p>Skylight bathtub, private terrace.</p>
-              <div class="price">From $480/night</div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="dining" class="section dining">
-      <div class="container two-col">
-        <div>
-          <h2>Dining</h2>
-          <p>Seasonal tasting menus by Chef Rivera. Vegetables from our rooftop garden, lake fish, wood-fired breads.</p>
-          <ul class="bullets">
-            <li>Breakfast 7–11am, Dinner 6–10pm</li>
-            <li>Plant-forward tasting menu available</li>
-            <li>Cellar of 300+ natural wines</li>
-          </ul>
-        </div>
-        <div class="image"></div>
-      </div>
-    </section>
-
-    <section id="spa" class="section spa">
-      <div class="container two-col">
-        <div class="image"></div>
-        <div>
-          <h2>Spa</h2>
-          <p>Thermal suite with saunas and aromatherapy steam. Treatments with alpine botanicals and sound therapy.</p>
-          <ul class="bullets">
-            <li>Open 9am–9pm daily</li>
-            <li>Private hydrotherapy for couples</li>
-            <li>Cold plunge and stargazing deck</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <section id="experiences" class="section experiences">
-      <div class="container">
-        <h2>Experiences</h2>
-        <div class="chips">
-          <span class="chip">Sunrise paddle</span>
-          <span class="chip">Foraging walk</span>
-          <span class="chip">Wine tastings</span>
-          <span class="chip">Stargazing</span>
-          <span class="chip">Forest bathing</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="book" class="section book">
-      <div class="container">
-        <h2>Book your stay</h2>
-        <form id="booking-form" class="booking-form" autocomplete="off">
-          <label>
-            <span>Check-in</span>
-            <input type="date" id="checkin" required>
-          </label>
-          <label>
-            <span>Check-out</span>
-            <input type="date" id="checkout" required>
-          </label>
-          <label>
-            <span>Guests</span>
-            <input type="number" id="guests" min="1" value="2" required>
-          </label>
-          <label>
-            <span>Room type</span>
-            <select id="room-type">
-              <option>Deluxe King</option>
-              <option>Lakeside Suite</option>
-              <option>Sky Loft</option>
-            </select>
-          </label>
-          <button type="submit" class="btn btn-primary">Check availability</button>
-        </form>
-        <div id="booking-result" class="booking-result" aria-live="polite"></div>
-      </div>
-    </section>
-
-    <section id="contact" class="section contact">
-      <div class="container two-col">
-        <div>
-          <h2>Contact</h2>
-          <p>Email concierge@aurorahotel.example or call +1 (555) 284-9301</p>
-          <p>122 Lakecrest Way, Alpine Shores</p>
-          <div class="socials">
-            <a href="#" aria-label="Instagram" class="social">IG</a>
-            <a href="#" aria-label="Facebook" class="social">FB</a>
-            <a href="#" aria-label="TikTok" class="social">TT</a>
-          </div>
-        </div>
-        <iframe title="Map to Aurora Boutique Hotel" class="map" srcdoc="<!doctype html><html><body style='margin:0'><div style='display:flex;align-items:center;justify-content:center;height:100vh;font-family:Arial,sans-serif;color:#123'>Map placeholder</div></body></html>"></iframe>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© <span id="year"></span> Aurora Boutique Hotel</div>
-      <div class="fineprint">
-        <a href="#" class="link">Privacy</a>
-        <a href="#" class="link">Terms</a>
-        <a href="#" class="link">Accessibility</a>
-      </div>
-    </div>
-  </footer>
-
-  <button id="chat-toggle" class="chat-toggle" aria-label="Open concierge chat"></button>
-  <div id="chat-panel" class="chat-panel" aria-live="polite" aria-expanded="false"></div>
-
-  <script type="module" src="/assets/js/main.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/chatbot/config.js"></script>
+    <script src="js/core/database.js"></script>
+    <script src="js/core/utils.js"></script>
+    <script src="js/ui/ui.js"></script>
+    <script src="js/chatbot/chatbot.state.js"></script>
+    <script src="js/chatbot/chatbot.nlp.js"></script>
+    <script src="js/chatbot/chatbot.fsm.js"></script>
+    <script src="js/chatbot/chatbot.core.js"></script>
+    <script src="js/main.js"></script>         
 </body>
 </html>
